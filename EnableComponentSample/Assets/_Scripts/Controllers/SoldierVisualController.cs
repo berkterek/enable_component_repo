@@ -5,6 +5,7 @@ namespace EnableComponents.Controllers
     public class SoldierVisualController : MonoBehaviour
     {
         [SerializeField] Animator _animator;
+        [SerializeField] Transform _transform;
         
         static readonly int Walking = Animator.StringToHash("isWalking");
         static readonly int Attacking = Animator.StringToHash("isAttacking");
@@ -15,6 +16,8 @@ namespace EnableComponents.Controllers
             {
                 _animator = GetComponentInChildren<Animator>();
             }
+
+            if (_transform == null) _transform = GetComponent<Transform>();
         }
 
         public void IsWalking(bool value)
@@ -27,6 +30,11 @@ namespace EnableComponents.Controllers
         {
             if (_animator.GetBool(Attacking) == value) return;
             _animator.SetBool(Attacking, value);
+        }
+
+        public void SetPosition(Vector3 position)
+        {
+            _transform.position = position;
         }
     }
 }
