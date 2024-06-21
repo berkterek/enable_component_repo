@@ -23,10 +23,11 @@ namespace EnableComponents.Authroings
                 AddComponent<SearchTargetTag>(entity);
                 AddComponent<TimerData>(entity);
                 AddComponent<SoldierTargetData>(entity);
-                
+
+                uint randomSeed = (uint)new System.Random().Next(0, int.MaxValue);
                 AddComponent<RandomData>(entity, new()
                 {
-                    Random = Random.CreateFromIndex(1000)
+                    Random = Random.CreateFromIndex(randomSeed)
                 });
                 
                 AddComponent<MoveData>(entity, new ()
