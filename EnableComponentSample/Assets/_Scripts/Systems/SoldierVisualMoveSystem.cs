@@ -5,7 +5,6 @@ using Unity.Transforms;
 
 namespace EnableComponents.Systems
 {
-    [BurstCompile]
     [UpdateInGroup(typeof(SimulationSystemGroup))]
     [UpdateBefore(typeof(TransformSystemGroup))]
     [UpdateAfter(typeof(SoldierEntityMoveSystem))]
