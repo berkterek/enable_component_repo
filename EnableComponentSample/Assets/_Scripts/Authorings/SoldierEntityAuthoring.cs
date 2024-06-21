@@ -22,6 +22,7 @@ namespace EnableComponents.Authroings
                 AddComponent<AttackTag>(entity);
                 AddComponent<SearchTargetTag>(entity);
                 AddComponent<TimerData>(entity);
+                AddComponent<SoldierTargetData>(entity);
                 
                 AddComponent<RandomData>(entity, new()
                 {
