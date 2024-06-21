@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: _Mushroom
+  m_Controller: {fileID: 9100000, guid: 4f230fa6acf87ff4aa55a06a9691101d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f208a4c87eb6a4557ab47ee61b4def5e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ee0d8faa88dc94cf4812099310cb78f9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5e9a287fbbd884d90950070c02c1de1e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f004821d3be4d4f90997319fd0673a49, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 46d6e75dcacf842359b20e3e94f2955f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d40ea5ba6d0bc42f18eb846cdb50a3f1, type: 2}
