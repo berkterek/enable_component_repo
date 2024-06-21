@@ -23,12 +23,14 @@ namespace EnableComponents.Controllers
         public void IsWalking(bool value)
         {
             if (_animator.GetBool(Walking) == value) return;
+            IsAttacking(false);
             _animator.SetBool(Walking, value);
         }
 
         public void IsAttacking(bool value)
         {
             if (_animator.GetBool(Attacking) == value) return;
+            IsWalking(false);
             _animator.SetBool(Attacking, value);
         }
 

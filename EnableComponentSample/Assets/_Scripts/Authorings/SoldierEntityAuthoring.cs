@@ -1,6 +1,7 @@
 using EnableComponents.Components;
 using Unity.Entities;
 using UnityEngine;
+using Random = Unity.Mathematics.Random;
 
 namespace EnableComponents.Authroings
 {
@@ -15,10 +16,16 @@ namespace EnableComponents.Authroings
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
 
+                AddComponent<SoldierTag>(entity);
                 AddComponent<MoveTag>(entity);
                 AddComponent<IdleTag>(entity);
                 AddComponent<AttackTag>(entity);
-                AddComponent<SoldierTag>(entity);
+                AddComponent<SearchTargetTag>(entity);
+                
+                AddComponent<RandomData>(entity, new()
+                {
+                    Random = Random.CreateFromIndex(1000)
+                });
                 
                 AddComponent<MoveData>(entity, new ()
                 {
